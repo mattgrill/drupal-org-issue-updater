@@ -1,0 +1,9 @@
+{
+  "show_browser" : true,
+  "username": "somebody",
+  "pass": "password123",
+  "listing_url": "https://www.drupal.org/project/issues/search/drupal?project_issue_followers=&status%5B%5D=Open&version%5B%5D=8.x&component%5B%5D=outside_in.module&issue_tags_op=%3D",
+  "dropdown_selector": "#edit-field-issue-component-und",
+  "dropdown_value": "settings_tray.module",
+  "change_message": "Changing to new <strong>settings_tray.module</strong> component. @drpal thanks for script help! :)"
+}

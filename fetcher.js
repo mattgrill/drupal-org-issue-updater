@@ -5,6 +5,9 @@ var config = require('./pass.json');
 const nightmare = Nightmare({ show: false });
 const drupalapi = new DrupalAPI();
 
+/**
+ * Currently not using this file because the drupalapi.node results will be cached so you can't run the fetcher more than once.
+ */
 // Promise.all([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 Promise.all([0]
   .map(index => drupalapi.node({
@@ -28,11 +31,6 @@ Promise.all([0]
     urls.reduce((accumulator, url) => (
       accumulator.then(results => (
         nightmare
-  /*        .goto('https://www.drupal.org/user/login')
-          .type('form#user-login #edit-name', config.username)
-          .type('form#user-login #edit-pass', config.pass)
-          .click('form#user-login [type=submit]')
-          .wait('#user-user-full-group-profile-main')*/
           .goto(url)
           .wait('body')
           .select('#edit-field-issue-component-und', 'settings_tray.module')
