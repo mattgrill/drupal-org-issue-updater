@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "eslint-config-airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "root": true,
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "brace-style": ["error", "stroustrup"]
+  },
+  "globals": {
+    "jQuery": true
+  }
+}
