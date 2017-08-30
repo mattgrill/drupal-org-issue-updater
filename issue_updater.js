@@ -1,7 +1,7 @@
 const Nightmare = require('nightmare');
 const config = require('./config.json');
 
-const nightmare = Nightmare({show: config.show_browser});
+const nightmare = Nightmare({show: config.show_browser, typeInterval: 25});
 
 nightmare
   .goto('https://www.drupal.org/user/login')
@@ -27,6 +27,7 @@ nightmare
           .select(config.dropdown_selector, config.dropdown_value)
           .type('#edit-nodechanges-comment-comment-body-und-0-value', config.change_message)
           .click('.form-actions [value=Save]')
+          .wait('.messages.status')
           .title()
           .then((result) => {
             console.log("changed: " + result);

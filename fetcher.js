@@ -2,7 +2,7 @@ const Nightmare = require('nightmare');
 const DrupalAPI = require('drupal-org-api');
 var config = require('./pass.json');
 
-const nightmare = Nightmare({ show: false });
+const nightmare = Nightmare({ show: false, typeInterval: 10 });
 const drupalapi = new DrupalAPI();
 
 /**
