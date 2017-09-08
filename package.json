@@ -8,7 +8,8 @@
     "prettier": "./node_modules/.bin/prettier --single-quote --write index.js"
   },
   "dependencies": {
-    "nightmare": "^2.10.0"
+    "nightmare": "^2.10.0",
+    "nodegit": "^0.20.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0 || ^4.3.0",
